@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="jogo do mario.js" defer></script>
+    <title>Jogo do Mario!</title>
+    <style>
+        /* Estilo base para as nuvens */
+        .cloud {
+            width: 100px; /* Largura da nuvem, ajuste conforme necessário */
+            position: absolute; /* Para posicionamento absoluto */
+            opacity: 0.8; /* Levemente transparente */
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .cloud {
+                top: 180px; /* Aumenta a altura das nuvens em telas pequenas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cloud {
+                top: 150px; /* Aumenta ainda mais a altura das nuvens em dispositivos móveis */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-board">
+        <!-- Ícones de nuvens no fundo, com espaçamento -->
+        <img src="cloud.png" class="cloud" style="top: 50px; left: 100px;">
+        <img src="cloud.png" class="cloud" style="top: 70px; left: 220px;"> <!-- 120px da primeira -->
+        <img src="cloud.png" class="cloud" style="top: 30px; left: 340px;"> <!-- 120px da segunda -->
+        <img src="cloud.png" class="cloud" style="top: 100px; left: 460px;"> <!-- 120px da terceira -->
+        <img src="cloud.png" class="cloud" style="top: 90px; left: 580px;"> <!-- 120px da quarta -->
+        
+        <!-- Mario e o pipe -->
+        <img src="marioteste.gif" class="mario">
+        <img src="pipe do mario.jpg" class="pipe">
+    </div>
+    <button id="botaoReiniciar" onclick="reiniciarJogo()" style="display: none;">Reiniciar Jogo</button>
+
+    <div id="pontuacao">Pontuação: 0</div>
+    <div id="recorde">Recorde: 0</div>
+</body>
+</html>
